@@ -3,3 +3,11 @@ body{
     display: inline-block;
     font-size: x-large;
 }
+.row1content{
+    display: flex;
+    position: relative;
+    margin: 20px 5px ;
+}
+.info{
+    margin-right:20px ;
+}

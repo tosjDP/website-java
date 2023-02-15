@@ -9,5 +9,40 @@
 <h1>venue</h1>
 <h2 th:text="${venue.venueName}">Naam venue</h2>
 <p th:text="${venue.getLinkMoreInfo()}" th:href="@{${venue.linkMoreInfo}}">link</p>
+
+<h3>Den Aalmoezenier</h3>
+
+  <div class="row1content">
+    <div class="info">info ?</div>
+    <div th:text="${venue.getLinkMoreInfo()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">capacity</div>
+    <div th:text="${venue.getCapacity()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">food provided?</div>
+    <div th:text="${venue.isFoodProvided()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">indoor?</div>
+    <div th:text="${venue.isIndoor()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">outdoor?</div>
+    <div th:text="${venue.isOutdoor()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">fre parking?</div>
+    <div th:text="${venue.isFreeParkingAvailable()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">hoever van publiek transport?</div>
+    <div th:text="${venue.getDistanceFromPublicTransportInKm()}">1.0</div>
+  </div>
+  <div class="row1content">
+    <div class="info">city?</div>
+   <div th:text="${venue.getCity()}">antwerpen</div>
+  </div>
 </body>
 </html>
