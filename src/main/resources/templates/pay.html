@@ -2,17 +2,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>About pagina</title>
+    <title>Title</title>
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
 </head>
 <body>
-<h1>About me</h1>
-<p>This is all about me...</p>
-<ol>
-    <li th:text="${name}">naam</li>
-    <li th:text="${street}">straat</li>
-    <li th:text="${city}">gemeente</li>
-</ol>
-<p th:text="|ik ben ${name} en woon in ${street} te ${city}|">waar</p>
+<h1>Pay</h1>
+<p th:text="|de datum van vandaag is ${formatDateTime}|">date</p>
+<p th:text="|de uiterste datum van betaling is ${formatDateTimeAfter}|"></p>
 </body>
 </html>
