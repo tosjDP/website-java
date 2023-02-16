@@ -6,6 +6,12 @@
     <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
 </head>
 <body>
+<nav id="topnav">
+    <a id="logo" class="nav-link" href="#">Tosj</a>
+    <a class="nav-link" href="home.html">Home</a>
+    <a class="nav-link" href="venuedetails.html">Venuedetails</a>
+    <a class="nav-link" href="about.html">about me</a>
+</nav>
 <h1>Pay</h1>
 <p th:text="|de datum van vandaag is ${formatDateTime}|">date</p>
 <p th:text="|de uiterste datum van betaling is ${formatDateTimeAfter}|"></p>
