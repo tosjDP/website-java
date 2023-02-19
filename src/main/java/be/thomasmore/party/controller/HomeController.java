@@ -3,6 +3,7 @@ package be.thomasmore.party.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -39,5 +40,17 @@ public class HomeController {
         model.addAttribute("formatDateTime",formatDateTime);
         model.addAttribute("formatDateTimeAfter",formatDateTimeAfter);
     return "pay";
+    }
+    @RequestMapping("/home")
+    public String home() {
+        return "home";
+    }
+    @RequestMapping("/Venue")
+    public String Venuedetails() {
+        return "Venuedetails";
+    }
+    @RequestMapping("/about")
+    public String aboutme() {
+        return "about me";
     }
 }
