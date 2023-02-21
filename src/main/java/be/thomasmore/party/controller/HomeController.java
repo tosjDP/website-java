@@ -41,16 +41,4 @@ public class HomeController {
         model.addAttribute("formatDateTimeAfter",formatDateTimeAfter);
     return "pay";
     }
-    @RequestMapping("/home")
-    public String home() {
-        return "home";
-    }
-    @RequestMapping("/Venue")
-    public String Venuedetails() {
-        return "Venuedetails";
-    }
-    @RequestMapping("/about")
-    public String aboutme() {
-        return "about me";
-    }
 }
