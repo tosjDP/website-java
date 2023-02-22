@@ -1,22 +1,24 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>HOME</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd%22%3E">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/%22%3E">
+        <head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/party.css}"/>
+<title>Homepagina</title>
 </head>
 <body>
+<div th:replace="~{fragments/headerfooter :: header}">Hier komt de header</div>
 
-<nav id="topnav">
-    <a id="logo" class="nav-link" href="#">Tosj</a>
-    <a class="nav-link" href="home">Home</a>
-    <a class="nav-link" href="venuedetails">Venuedetails</a>
-    <a class="nav-link" href="about">about me</a>
-</nav>
+<div class="freespaceforheader"></div>
+<div class="row1">
+    <div class="row1content">
+        <div>
+            <h1>Homepagina</h1>
+            <p th:text="${myCalculatedValue}">onbekend nummer</p>
 
-
-<h1>Homepagina</h1>
-<p th:text="${calculatedValue}">onbekend nummer</p>
-
+            <p><a th:href="@{/about}">about</a></p>
+        </div>
+    </div>
+</div>
+<div th:replace="~{fragments/headerfooter :: footer}">Hier komt de footer</div>
 </body>
 </html>

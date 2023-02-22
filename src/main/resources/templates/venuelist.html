@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div th:replace="~{fragments/header :: header}">Hier komt de header</div>
+<body>
+
+<div class="freespaceforheader"></div>
+<div class="row1">
+    <div class="row1content">
+        <div>
+            <h1>Venues</h1>
+            <div th:each="venue : ${venues}">
+                <a th:href="@{'/venuedetails/' + ${venue.id}}">
+          <span class="buttonLook mediumButton"
+                th:text="${venue.getVenueName()}">
+            onbekend nummer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom" th:fragment="footer">
+    <p>copyright Thomasmore</p>
+</div>
+</body>
+</html>

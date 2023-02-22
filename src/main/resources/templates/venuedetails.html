@@ -5,13 +5,9 @@
   <title>HOME</title>
   <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
 </head>
+<div th:replace="~{fragments/header :: header}">Hier komt de header</div>
 <body>
-<nav id="topnav">
-  <a id="logo" class="nav-link" href="#">Tosj</a>
-  <a class="nav-link" href="home">Home</a>
-  <a class="nav-link" href="venuedetails">Venuedetails</a>
-  <a class="nav-link" href="about">about me</a>
-</nav>
+
 <h1>venue</h1>
 <h2 th:text="${venue.venueName}">Naam venue</h2>
 <p th:text="${venue.getLinkMoreInfo()}" th:href="@{${venue.linkMoreInfo}}">link</p>
@@ -50,5 +46,8 @@
     <div class="info">city?</div>
    <div th:text="${venue.getCity()}">antwerpen</div>
   </div>
+<div class="bottom" th:fragment="footer">
+  <p>copyright Thomasmore</p>
+</div>
 </body>
 </html>

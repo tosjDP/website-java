@@ -1,19 +1,19 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/index.css}"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/party.css}"/>
+<title>Pay pagina</title>
 </head>
 <body>
-<nav id="topnav">
-    <a id="logo" class="nav-link" href="#">Tosj</a>
-    <a class="nav-link" href="home">Home</a>
-    <a class="nav-link" href="venuedetails">Venuedetails</a>
-    <a class="nav-link" href="about">about me</a>
-</nav>
-<h1>Pay</h1>
-<p th:text="|de datum van vandaag is ${formatDateTime}|">date</p>
-<p th:text="|de uiterste datum van betaling is ${formatDateTimeAfter}|"></p>
+<div th:replace="~{fragments/header :: header}">Hier komt de header</div>
+
+<p th:if="${weekend}">prettig weekend</p>
+<p th:text="|De datum van vandaag is ${now}|"></p>
+<p th:text="|De uiterste datum van betalen is ${paydate}|"></p>
+<p th:unless="${weekend}" >voor je het weet is het weer weekend</p>
+<div class="bottom" th:fragment="footer">
+    <p>copyright Thomasmore</p>
+</div>
 </body>
 </html>
