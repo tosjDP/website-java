@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/party.css}"/>
 </head>
-<div th:replace="~{fragments/header :: header}">Hier komt de header</div>
 <body>
-
+<div th:replace="~{fragments/headerfooter :: header}">Hier komt de header</div>
 <div class="freespaceforheader"></div>
 <div class="row1">
     <div class="row1content">
+        <div th:replace="~{fragments/venuefilter :: filter}"></div>
         <div>
-            <h1>Venues</h1>
             <div th:each="venue : ${venues}">
                 <a th:href="@{'/venuedetails/' + ${venue.id}}">
           <span class="buttonLook mediumButton"

@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter</title>
+</head>
+<body>
+<div th:fragment="filter">
+  <div>
+    <h1>venues</h1>
+    <p>outdoor:</p>
+    <div class="navbuttons">
+      <a th:href="@{/venuelist/outdoor/all}"><span class="buttonLook smallButton" th:classappend="${filter==null || filter.equals('all')? 'activeFilter' : ' '}">all</span></a>
+      <a th:href="@{/venuelist/outdoor/yes}"><span class="buttonLook smallButton" th:classappend="${filter!=null && filter.equals('yes')? 'activeFilter' : ' '}">yes</span></a>
+      <a th:href="@{/venuelist/outdoor/no}"><span class="buttonLook smallButton" th:classappend="${filter!=null && filter.equals('no')? 'activeFilter' : ' '}">no</span></a>
+    </div>
+  </div>
+</div>
+<div class="bottom" th:fragment="footer">
+  <p>copyright ThomasMore</p>
+</div>
+</body>
+</html>
