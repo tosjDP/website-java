@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/party.css}"/>
+</head>
+<div th:replace="~{fragments/headerfooter :: header}">Hier komt de header</div>
+<body>
+
+<h1>venue</h1>
+<h2 th:text="${artist.artistName}">Naam artist</h2>
+<p th:text="${artist.getLinkMoreInfo()}" th:href="@{${artist.linkMoreInfo}}">link</p>
+
+<h3>Den Aalmoezenier</h3>
+
+<div class="row1content">
+    <div class="info">info ?</div>
+    <div th:text="${artist.getLinkMoreInfo()}">1.0</div>
+</div>
+<div class="row1content">
+    <div class="info">Bio?</div>
+    <div th:text="${artist.getBio}">antwerpen</div>
+</div>
+<div class="row1content">
+    <div class="info">Genre?</div>
+    <div th:text="${artist.getGenre()}">iets</div>
+</div>
+<div class="bottom" th:fragment="footer">
+    <p>copyright Thomasmore</p>
+</div>
+</body>
+</html>
